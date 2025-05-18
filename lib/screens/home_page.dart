@@ -1,27 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+import '../widgets/gradient_card.dart';
+import 'ChooseLessonScreen.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.landscapeLeft,
-    DeviceOrientation.landscapeRight,
-  ]);
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Piano Learning App',
-      home: HomePage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
+/*Tu Quang Chuong thuc hien */
 
 class HomePage extends StatelessWidget {
   final List<Widget> cardItems = [
@@ -64,11 +45,11 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      navButton(Icons.home, "Home"),
+                      navButton(Icons.home, "Home", context),
                       SizedBox(height: 12),
-                      navButton(Icons.school, "Learn"),
+                      navButton(Icons.school, "Learn", context),
                       SizedBox(height: 12),
-                      navButton(Icons.music_note, "Songs"),
+                      navButton(Icons.music_note, "Songs", context),
                     ],
                   ),
                   Column(
@@ -81,9 +62,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-
             SizedBox(width: 20),
-
             // Nội dung chính
             Expanded(
               child: ListView(
@@ -103,66 +82,28 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget navButton(IconData icon, String label) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 24,
-          backgroundColor: Colors.greenAccent.shade100,
-          child: Icon(icon, size: 24),
-        ),
-        SizedBox(height: 4),
-        Text(label, style: TextStyle(fontSize: 12)),
-      ],
-    );
-  }
-}
-
-class GradientCard extends StatelessWidget {
-  final String title;
-  final IconData? icon;
-  final String? imageAsset;
-  final List<Color> gradientColors;
-
-  const GradientCard({
-    required this.title,
-    this.icon,
-    this.imageAsset,
-    required this.gradientColors,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: gradientColors),
-        borderRadius: BorderRadius.circular(24),
-      ),
+  Widget navButton(IconData icon, String label, BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        if (label == "Learn") {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => ChooseLessonScreen(token: "YOUR_TOKEN_HERE"),
+            ),
+          );
+        }
+        // Có thể thêm điều hướng cho các label khác nếu muốn
+      },
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          Spacer(),
-          if (icon != null)
-            Align(
-              alignment: Alignment.center,
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.greenAccent,
-                child: Icon(icon, size: 20),
-              ),
-            ),
-          if (imageAsset != null)
-            Align(
-              alignment: Alignment.center,
-              child: CircleAvatar(
-                radius: 30,
-                backgroundImage: AssetImage(imageAsset!),
-              ),
-            ),
+          CircleAvatar(
+            radius: 24,
+            backgroundColor: Colors.greenAccent.shade100,
+            child: Icon(icon, size: 24),
+          ),
+          SizedBox(height: 4),
+          Text(label, style: TextStyle(fontSize: 12)),
         ],
       ),
     );
