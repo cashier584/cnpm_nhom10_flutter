@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/Lesson.dart';
 
-/*Tu Quang Chuong thuc hien */
+/*Tu Quang Chuong thuc hien
+4.1.10: Hiển thị nội dung chi tiết bài học đã chọn. */
 
 class LessonDetailScreen extends StatelessWidget {
   final Lesson lesson;
