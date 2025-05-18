@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'screens/ChooseLessonScreen.dart';
+
+/* Tu Quang Chuong thuc hien */
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -64,11 +68,11 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      navButton(Icons.home, "Home"),
+                      navButton(Icons.home, "Home", context),
                       SizedBox(height: 12),
-                      navButton(Icons.school, "Learn"),
+                      navButton(Icons.school, "Learn", context),
                       SizedBox(height: 12),
-                      navButton(Icons.music_note, "Songs"),
+                      navButton(Icons.music_note, "Songs", context),
                     ],
                   ),
                   Column(
@@ -103,17 +107,31 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget navButton(IconData icon, String label) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 24,
-          backgroundColor: Colors.greenAccent.shade100,
-          child: Icon(icon, size: 24),
-        ),
-        SizedBox(height: 4),
-        Text(label, style: TextStyle(fontSize: 12)),
-      ],
+  Widget navButton(IconData icon, String label, BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        if (label == "Learn") {
+          // Thay thế bằng màn hình bạn muốn chuyển tới
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => ChooseLessonScreen(token: "YOUR_TOKEN_HERE"),
+            ),
+          );
+        }
+        // Có thể thêm điều hướng cho các label khác nếu muốn
+      },
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 24,
+            backgroundColor: Colors.greenAccent.shade100,
+            child: Icon(icon, size: 24),
+          ),
+          SizedBox(height: 4),
+          Text(label, style: TextStyle(fontSize: 12)),
+        ],
+      ),
     );
   }
 }

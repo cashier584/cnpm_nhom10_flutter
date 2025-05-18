@@ -93,7 +93,6 @@ class HomePage extends StatelessWidget {
             ),
           );
         }
-        // Có thể thêm điều hướng cho các label khác nếu muốn
       },
       child: Column(
         children: [
