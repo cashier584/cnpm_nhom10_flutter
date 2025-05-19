@@ -3,8 +3,12 @@ import '../models/Lesson.dart';
 import '../services/lesson_service.dart';
 import 'LessonDetailScreen.dart';
 
-
-/*Tu Quang Chuong thuc hien */
+/* Tu Quang Chuong
+4.1.2 - 4.1.6: Gửi GET, nhận và hiển thị danh sách bài học.
+4.1.7: Người dùng chọn một bài học.
+4.1.8: Gửi xác nhận chọn bài học (POST).
+4.1.10: Hiển thị nội dung chi tiết bài học.
+*/
 
 class ChooseLessonScreen extends StatefulWidget {
   final String token;

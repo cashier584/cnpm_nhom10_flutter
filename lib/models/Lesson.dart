@@ -1,5 +1,5 @@
-
-/*Tu Quang Chuong thuc hien */
+/* Tu Quang Chuong thuc hien
+4.1.5: Flutter nhận dữ liệu JSON và giải mã.*/
 
 class Lesson {
   final int lessonId;

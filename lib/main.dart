@@ -4,7 +4,9 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'screens/ChooseLessonScreen.dart';
 
-/* Tu Quang Chuong thuc hien */
+/* Tu Quang Chuong thuc hien
+4.1.1: Người dùng nhấn "Chọn bài học" (nút "Learn" trên sidebar).
+*/
 
 
 void main() async {
@@ -111,7 +113,6 @@ class HomePage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (label == "Learn") {
-          // Thay thế bằng màn hình bạn muốn chuyển tới
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -119,7 +120,6 @@ class HomePage extends StatelessWidget {
             ),
           );
         }
-        // Có thể thêm điều hướng cho các label khác nếu muốn
       },
       child: Column(
         children: [
