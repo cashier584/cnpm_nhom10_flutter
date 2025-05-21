@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'screens/ChooseLessonScreen.dart';
+import 'screens/piano_screen.dart';
+import 'widgets/gradient_card.dart';
 
 /* Tu Quang Chuong thuc hien
 4.1.1: Người dùng nhấn "Chọn bài học" (nút "Learn" trên sidebar).
@@ -23,6 +25,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Piano Learning App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -30,21 +36,27 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  final List<Widget> cardItems = [
+  final List<GradientCard> cardItems = [
     GradientCard(
       title: "Bài tập",
-      icon: Icons.arrow_forward,
+      icon: Icons.assignment,
       gradientColors: [Colors.purpleAccent, Colors.blueAccent],
     ),
     GradientCard(
       title: "Thử thách",
-      imageAsset: "assets/challenge.jpg",
+      icon: Icons.fitness_center,
       gradientColors: [Colors.orange, Colors.yellow],
     ),
     GradientCard(
       title: "Đàn Piano",
-      imageAsset: "assets/piano.png",
+      icon: Icons.piano,
       gradientColors: [Colors.pinkAccent, Colors.lightBlueAccent],
+      onTap: (context) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => PianoScreen()),
+        );
+      },
     ),
   ];
 
@@ -74,7 +86,12 @@ class HomePage extends StatelessWidget {
                       SizedBox(height: 12),
                       navButton(Icons.school, "Learn", context),
                       SizedBox(height: 12),
-                      navButton(Icons.music_note, "Songs", context),
+                      navButton(Icons.music_note, "Piano", context, onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => PianoScreen()),
+                        );
+                      }),
                     ],
                   ),
                   Column(
@@ -109,10 +126,12 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget navButton(IconData icon, String label, BuildContext context) {
+  Widget navButton(IconData icon, String label, BuildContext context, {VoidCallback? onTap}) {
     return GestureDetector(
       onTap: () {
-        if (label == "Learn") {
+        if (onTap != null) {
+          onTap();
+        } else if (label == "Learn") {
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -130,57 +149,6 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 4),
           Text(label, style: TextStyle(fontSize: 12)),
-        ],
-      ),
-    );
-  }
-}
-
-class GradientCard extends StatelessWidget {
-  final String title;
-  final IconData? icon;
-  final String? imageAsset;
-  final List<Color> gradientColors;
-
-  const GradientCard({
-    required this.title,
-    this.icon,
-    this.imageAsset,
-    required this.gradientColors,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: gradientColors),
-        borderRadius: BorderRadius.circular(24),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(title,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          Spacer(),
-          if (icon != null)
-            Align(
-              alignment: Alignment.center,
-              child: CircleAvatar(
-                radius: 18,
-                backgroundColor: Colors.greenAccent,
-                child: Icon(icon, size: 20),
-              ),
-            ),
-          if (imageAsset != null)
-            Align(
-              alignment: Alignment.center,
-              child: CircleAvatar(
-                radius: 30,
-                backgroundImage: AssetImage(imageAsset!),
-              ),
-            ),
         ],
       ),
     );
