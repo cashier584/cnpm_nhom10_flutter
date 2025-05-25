@@ -1,0 +1,180 @@
+{
+   "checksum": "a15c8a287002adff9150b3d0b3def9ce",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13273584150045201",
+               "date_last_used": "0",
+               "guid": "db5749b9-2e28-479f-a2c9-3b11957c75cb",
+               "id": "10",
+               "name": "Dell Auction",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.dellauction.com/",
+               "visit_count": 0
+            }, {
+               "date_added": "13273584150045201",
+               "date_last_used": "0",
+               "guid": "a8330779-d871-4432-89b6-848bdcc785a3",
+               "id": "11",
+               "name": "Dell",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.dell.com/",
+               "visit_count": 0
+            }, {
+               "date_added": "13273584150060828",
+               "date_last_used": "0",
+               "guid": "2292cfef-bf8c-4c4e-8e3c-76681f0c35d6",
+               "id": "12",
+               "name": "Support.Dell.Com",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.dell.com/support/home",
+               "visit_count": 0
+            } ],
+            "date_added": "13352138536443594",
+            "date_last_used": "0",
+            "date_modified": "13352138536443594",
+            "guid": "efaf3c94-0ddf-4fef-aaff-c8190b90da97",
+            "id": "9",
+            "name": "Dell",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "13360078784433352",
+            "date_last_used": "0",
+            "guid": "54ff2845-5e4b-426a-aa75-f094500312b9",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "de-thi-hoc-ki-2-tieng-anh-3-family-and-friends-de-so-3-1680489554.pdf",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://img.loigiaihay.com/picture/share_img/2023/0403/de-thi-hoc-ki-2-tieng-anh-3-family-and-friends-de-so-3-1680489554.pdf",
+            "visit_count": 0
+         }, {
+            "date_added": "13360610910364169",
+            "date_last_used": "0",
+            "guid": "789b6734-1b5e-4ed3-8d47-9729d2517925",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Thư viện điện tử sách xã, phường, thị trấn",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://thuviencoso.vn/ViewBook.aspx?eid=73",
+            "visit_count": 0
+         }, {
+            "date_added": "13367061674966966",
+            "date_last_used": "0",
+            "guid": "afb4b8e4-785c-43f3-a9fe-c88e412c9762",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "downloads.apache.org/netbeans/netbeans/22/netbeans-22-bin.zip.sha512",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://downloads.apache.org/netbeans/netbeans/22/netbeans-22-bin.zip.sha512",
+            "visit_count": 0
+         }, {
+            "date_added": "13368099581006689",
+            "date_last_used": "0",
+            "guid": "42054071-1d74-40f9-9200-d44f7c36b609",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Cam19 - Test 1 - Part 3 - Listen & Type | IELTS Listening | English Listening Exercises",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://dailydictation.com/exercises/ielts-listening/cam19-test-1-part-3.1385/listen-and-type",
+            "visit_count": 0
+         }, {
+            "date_added": "13376416647012021",
+            "date_last_used": "0",
+            "guid": "b02cbee4-66e0-4e73-b941-611d1bd4acb0",
+            "id": "17",
+            "name": "Đăng nhập tài khoản",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://template-honey-bee.mysapo.net/account/login",
+            "visit_count": 0
+         } ],
+         "date_added": "13392035780252042",
+         "date_last_used": "0",
+         "date_modified": "13376416647012021",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [  ],
+            "date_added": "13375371834621324",
+            "date_last_used": "0",
+            "date_modified": "13375371834621324",
+            "guid": "c5beeaac-3dca-41b1-92f4-377cdd7b4de8",
+            "id": "6",
+            "name": "Bookmark Bar",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [  ],
+            "date_added": "13375371834621546",
+            "date_last_used": "0",
+            "date_modified": "13375371834621546",
+            "guid": "159fa9d4-f9b7-4210-bcbe-c0e76f768687",
+            "id": "7",
+            "name": "Other Bookmarks",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "children": [  ],
+            "date_added": "13375371834621587",
+            "date_last_used": "0",
+            "date_modified": "13375371834621587",
+            "guid": "9c011f8c-758c-4cb2-82de-c15d8109a56b",
+            "id": "8",
+            "name": "Synced Bookmarks",
+            "source": "unknown",
+            "type": "folder"
+         } ],
+         "date_added": "13392035780252045",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13392035780252047",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCOql2T+TAQAAEgAqGFJLY0tYSzdZNE1BczVrVCt6MzVMbHc9PUgDoAYHEq0BCBESqAEKHEZQTDZMSlBCZlNyU1NvWElHTlBNSWtWV3VDRT0SJGIwMmNiZWU0LTY2ZTAtNGU3My1iOTQxLTYxMWQxYmQ0YWNiMBgAIAAoADDpy+b+szI4x8zm/rMyQMfM5v6zMkocckN6cFhWYm02L29UNjZEc3cxZkg0bitaeEJvPVofIh36SU5UZnlRUWZPNjdrYlY0Uml6VDZNdUdoVFFJPWVQ9ESnwj4CYAUSrQEIEBKoAQocc2VseVFyVmo3bTdNb1l5N1BRRktLNkJKZ2dBPRIkNDIwNTQwNzEtMWQ3NC00MGY5LTkyMDAtZDQ0ZjdjMzZiNjA5GAAgACgAMJ6z9YCVMjjRs/WAlTJA0bP1gJUyShxsblJEc0lNZlErb0haRUJ1SDdmdE5WeDJHamM9Wh8iHfVjMjZNZjh6VFo4YUF4WDhqMW9KMFBlN2xPU1E9ZSFCex7CPgJgBRKtAQgPEqgBChxWMUFMbitsOWM1YlZvaWd3bUdHRUNRMDJyVjQ9EiRhZmI0YjhlNC03ODVjLTQzZjMtYTlmZS1jODhlNDEyYzk3NjIYACAAKAAwk8GAkpEyOM7CgJKRMkDOwoCSkTJKHE5xNm9kcHpyMmg0L2dQb0d1aWJZSmhJY0FzUT1aHyId60ZqZlRFYkE2LzdwQnBqUzY2Z09qYTgxVVRRbz1lrsZdRcI+AmAFEq0BCA0SqAEKHDFDQzd2RTJEUWZiRGF4Wk9RTldRb3lhUkRKST0SJDU0ZmYyODQ1LTVlNGItNDI2YS1hYTc1LWYwOTQ1MDAzMTJiORgAIAAoADDF8OX+szI4qtamkPcxQKrWppD3MUocamo4dTZLRWdvMDlsRmVqVy9KeSt3VVdkem4wPVofIh2sVkUwQ3pDMWlPQ1hRNEE5OGZ3OXNqMkx6Y2pzPWWj5JUUwj4CYAUSrAEIBxKnAQocamVEb0Zsa3BGV3o0N28vaHQ0VjRoTlZtdCtFPRIkMTU5ZmE5ZDQtZjliNy00MjEwLWJjYmUtYzBlNzZmNzY4Njg3GAAgACgAMMWPzIywMjiUkMyMsDJAlJDMjLAyShxXVkFBSExKcm9YM2ZlTHdZNUZDSHdGbi9CWVk9Wh4iHGxaMmozb05Kb3FHRlJGamU4ZkJmaG1YakwwST1lAAAAAMI+AmAAEo4BCAMSiQEKHG5qZ0R1ODhlQ3J2WHA4NnBEN2ZIR2NxRnA4OD0SJGU0ZmIzMzYyLTRhNDYtNTYzOC1iOTMzLTkyNTNlODczY2M4MhgAIAAoADDKgMbHhDE4s4TGx4QxQLOExseEMUoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAADCPgJgABKsAQgJEqcBChxISUVvVCtmNjJ6K2tzR3VJMHkvSjBhSEhPazA9EiRlZmFmM2M5NC0wZGRmLTRmZWYtYWFmZi1jODE5MGI5MGRhOTcYACAAKAAwqt6Bv9oxOJ3igb/aMUCd4oG/2jFKHDdZYVQ3ZTYyODU1emY5VnY0MnBScGNJaDVvcz1aHiIcWU50bHhiQ29CbGd0dFJxUTBHRFdyUXNCaS80PWUAAAAAwj4CYAASrQEIDBKoAQocYjlveDIxS21iZEFoc241YWdnR0M2RWxFMWR3PRIkMjI5MmNmZWYtYmY4Yy00YzRlLThlM2MtNzY2ODFmMGMzNWQ2GAAgACgAMMPngb/aMTi86IG/2jFAvOiBv9oxShxzSGlob1l0bGZycEwySVQ4NVQzMERWOTBmb289Wh8iHdlFZzk0a0hObitkdVNuVXNEdVJOczlnUHJOclU9ZQAAAADCPgJgBRKtAQgLEqgBChxhQVhUU05IaUF6Yk1RL25ZTUhHdEF1dTVpTDQ9EiRhODMzMDc3OS1kODcxLTQ0MzItODliNi04NDhiZGNjNzg1YTMYACAAKAAwxOeBv9oxOPXogb/aMUD16IG/2jFKHHNvMk8xSkpGaWkycGN0THZFTllZSHBxTjR5UT1aHyIdsys3cmIySVpRZFMxNnZBWldxOHFncCtaVEptUT1lAAAAAMI+AmAFEqwBCAoSpwEKHDYySmFadndiTVUwM0NENE9FakdBWGoyZnh4UT0SJGRiNTc0OWI5LTJlMjgtNDc5Zi1hMmM5LTNiMTE5NTdjNzVjYhgAIAAoADDF54G/2jE4lumBv9oxQJbpgb/aMUocOEVBWUEwR3BzeVNJU2lLcWw0eFBNS2tIWlZFPVoeIhxmdGpBbnpNQ1R1Y29Fcit2dWwvb1haNEtFZ2M9ZQAAAADCPgJgBRKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ2Zjc0YWIwNy1iMmJmLTUzNTAtYTA2Mi05YWY2MDVmNWMyZWYYACAAKAAwxIDGx4QxOLGDxseEMUCxg8bHhDFKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASrQEICBKoAQocbGJ2RkhYMkRxK1V4eTFCcmJkT2orRGFwUTE0PRIkOWMwMTFmOGMtNzU4Yy00Y2IyLTgyZGUtYzE1ZDgxMDlhNTZiGAAgACgAMMaPzIywMjiskMyMsDJArJDMjLAyShxNdUVocjdDWUVOVWlPWTl1elF4Q21Kb3k2bGs9Wh8iHbZPSkZyZk52ZGQwM0NuejByTWVIc25SZWN3a0U9ZQAAAADCPgJgABKOAQgCEokBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiQ1MDY5OThlMS0wNGM2LTU1NDMtOWRkZi0wY2VhMWYxZjRhNmMYACAAKAAwxYDGx4QxOMSDxseEMUDEg8bHhDFKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAwj4CYAASrQEIDhKoAQocNTZyWit1NmVMb0hpWWxkb2pWT3JVNm41RWhVPRIkNzg5YjY3MzQtMWI1ZS00ZWQzLThkNDctOTcyOWQyNTE3OTI1GAAgACgAMKqEhY75MTjShIWO+TFA0oSFjvkxShxLTHMzNUFxSFRDMytVNUVRb3RoYWY2NVowY1U9Wh8iHdZ1NVAzSXNGMW9HQm13a3BsMFV6SE5XVDM5YXc9ZQAAAADCPgJgBRKsAQgGEqcBChx2VHlUM3hSM0puZmZ0bWIycU1kZDBBRHE0Umc9EiRjNWJlZWFhYy0zZGNhLTQxYjEtOTJmNC0zNzdjZGQ3YjRkZTgYACAAKAAwxI/MjLAyOPuPzIywMkD7j8yMsDJKHHpBZ0tUdXJiWlZGa0xnQmZ4NVVBRUoyMnRhVT1aHiIcTG9UNkh4WHdrdmJvdHBTaC9BcDhFcEFkWi9JPWUAAAAAwj4CYAAwADgA",
+   "version": 1
+}
