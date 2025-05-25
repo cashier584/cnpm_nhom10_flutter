@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'screens/ChooseLessonScreen.dart';
+import 'screens/piano_screen.dart';
+import 'widgets/gradient_card.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +21,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Piano Learning App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -26,6 +32,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+
   // This would typically come from your authentication system
   final String token = "YOUR_TOKEN_HERE";
 
@@ -33,6 +40,7 @@ class HomePage extends StatelessWidget {
     GradientCard(
       title: "Flashcard",
       icon: Icons.style,
+
       gradientColors: [Colors.purpleAccent, Colors.blueAccent],
       onTap: (context) {
         Navigator.push(
@@ -45,7 +53,7 @@ class HomePage extends StatelessWidget {
     ),
     GradientCard(
       title: "Thử thách",
-      imageAsset: "assets/challenge.jpg",
+      icon: Icons.fitness_center,
       gradientColors: [Colors.orange, Colors.yellow],
       onTap: (context) {
         // Add navigation for challenge screen if needed
@@ -53,10 +61,15 @@ class HomePage extends StatelessWidget {
     ),
     GradientCard(
       title: "Đàn Piano",
-      imageAsset: "assets/piano.png",
+      icon: Icons.piano,
       gradientColors: [Colors.pinkAccent, Colors.lightBlueAccent],
       onTap: (context) {
-        // Add navigation for piano screen if needed
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => PianoScreen()),
+        );
+
       },
     ),
   ];
@@ -96,6 +109,7 @@ class HomePage extends StatelessWidget {
                         );
                       }),
                       SizedBox(height: 12),
+
                       navButton(Icons.music_note, "Songs", context, onTap: () {
                         // Handle songs navigation
                       }),
@@ -144,8 +158,10 @@ class HomePage extends StatelessWidget {
   }
 
   Widget navButton(IconData icon, String label, BuildContext context, {VoidCallback? onTap}) {
+
     return InkWell(
       onTap: onTap,
+
       child: Column(
         children: [
           CircleAvatar(
@@ -160,6 +176,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
 
 class GradientCard extends StatelessWidget {
   final String title;
@@ -218,3 +235,4 @@ class GradientCard extends StatelessWidget {
     );
   }
 }
+
