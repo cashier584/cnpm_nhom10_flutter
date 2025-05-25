@@ -1,3 +1,4 @@
+import 'package:cnpm_nhom10_flutter/screens/FlashcardScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -5,11 +6,6 @@ import 'dart:convert';
 import 'screens/ChooseLessonScreen.dart';
 import 'screens/piano_screen.dart';
 import 'widgets/gradient_card.dart';
-
-/* Tu Quang Chuong thuc hien
-4.1.1: Người dùng nhấn "Chọn bài học" (nút "Learn" trên sidebar).
-*/
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,26 +32,44 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  final List<GradientCard> cardItems = [
+
+  // This would typically come from your authentication system
+  final String token = "YOUR_TOKEN_HERE";
+
+  List<Widget> get cardItems => [
     GradientCard(
-      title: "Bài tập",
-      icon: Icons.assignment,
+      title: "Flashcard",
+      icon: Icons.style,
+
       gradientColors: [Colors.purpleAccent, Colors.blueAccent],
+      onTap: (context) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => FlashcardScreen(token: token),
+          ),
+        );
+      },
     ),
     GradientCard(
       title: "Thử thách",
       icon: Icons.fitness_center,
       gradientColors: [Colors.orange, Colors.yellow],
+      onTap: (context) {
+        // Add navigation for challenge screen if needed
+      },
     ),
     GradientCard(
       title: "Đàn Piano",
       icon: Icons.piano,
       gradientColors: [Colors.pinkAccent, Colors.lightBlueAccent],
       onTap: (context) {
+
         Navigator.push(
           context,
           MaterialPageRoute(builder: (_) => PianoScreen()),
         );
+
       },
     ),
   ];
@@ -67,7 +81,7 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Row(
           children: [
-            // Sidebar hoặc top bar xoay ngang
+            // Sidebar
             Container(
               width: 100,
               color: Colors.grey,
@@ -82,23 +96,40 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      navButton(Icons.home, "Home", context),
+                      navButton(Icons.home, "Home", context, onTap: () {
+                        // Handle home navigation
+                      }),
                       SizedBox(height: 12),
-                      navButton(Icons.school, "Learn", context),
-                      SizedBox(height: 12),
-                      navButton(Icons.music_note, "Piano", context, onTap: () {
+                      navButton(Icons.school, "Learn", context, onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (_) => PianoScreen()),
+                          MaterialPageRoute(
+                            builder: (_) => ChooseLessonScreen(token: token),
+                          ),
                         );
+                      }),
+                      SizedBox(height: 12),
+
+                      navButton(Icons.music_note, "Songs", context, onTap: () {
+                        // Handle songs navigation
                       }),
                     ],
                   ),
                   Column(
                     children: [
-                      Icon(Icons.settings, size: 28),
+                      IconButton(
+                        icon: Icon(Icons.settings, size: 28),
+                        onPressed: () {
+                          // Handle settings
+                        },
+                      ),
                       SizedBox(height: 16),
-                      Icon(Icons.search, size: 28),
+                      IconButton(
+                        icon: Icon(Icons.search, size: 28),
+                        onPressed: () {
+                          // Handle search
+                        },
+                      ),
                     ],
                   )
                 ],
@@ -107,7 +138,7 @@ class HomePage extends StatelessWidget {
 
             SizedBox(width: 20),
 
-            // Nội dung chính
+            // Main content
             Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -127,19 +158,10 @@ class HomePage extends StatelessWidget {
   }
 
   Widget navButton(IconData icon, String label, BuildContext context, {VoidCallback? onTap}) {
-    return GestureDetector(
-      onTap: () {
-        if (onTap != null) {
-          onTap();
-        } else if (label == "Learn") {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (_) => ChooseLessonScreen(token: "YOUR_TOKEN_HERE"),
-            ),
-          );
-        }
-      },
+
+    return InkWell(
+      onTap: onTap,
+
       child: Column(
         children: [
           CircleAvatar(
@@ -154,3 +176,63 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+class GradientCard extends StatelessWidget {
+  final String title;
+  final IconData? icon;
+  final String? imageAsset;
+  final List<Color> gradientColors;
+  final Function(BuildContext)? onTap;
+
+  const GradientCard({
+    required this.title,
+    this.icon,
+    this.imageAsset,
+    required this.gradientColors,
+    this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => onTap?.call(context),
+      child: Container(
+        width: 200,
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: gradientColors),
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            Spacer(),
+            if (icon != null)
+              Align(
+                alignment: Alignment.center,
+                child: CircleAvatar(
+                  radius: 18,
+                  backgroundColor: Colors.greenAccent,
+                  child: Icon(icon, size: 20),
+                ),
+              ),
+            if (imageAsset != null)
+              Align(
+                alignment: Alignment.center,
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundImage: AssetImage(imageAsset!),
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
